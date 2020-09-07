@@ -7,38 +7,43 @@ const Directory = () => {
     {
       title: "hats",
       imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-      size:"large",
+      size: "large",
       id: 1,
+      linkUrl: "hats",
     },
     {
       title: "jackets",
       imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-      size:"large",
+      size: "large",
       id: 2,
+      linkUrl: "",
     },
     {
       title: "sneakers",
       imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-      size:"large",
+      size: "large",
       id: 3,
+      linkUrl: "",
     },
     {
       title: "womans",
       imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-      size:"large",
+      size: "large",
       id: 4,
+      linkUrl: "",
     },
     {
       title: "mans",
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-      size:"large",
+      size: "large",
       id: 5,
+      linkUrl: "",
     },
   ]);
   return (
     <div className="directory-menu">
-      {section.map(({ title, imageUrl, id , size }) => (
-        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+      {section.map(({ id, ...otherSectionProps }) => (
+        <MenuItem key={id} {...otherSectionProps} /> 
       ))}
     </div>
   );

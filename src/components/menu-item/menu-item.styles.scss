@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid black;
+    background-size: cover;
     margin: 0 7.5px 15px;
     overflow: hidden;
     &:hover {
@@ -21,7 +22,7 @@
     }
 
     &.large {
-        height: 380px;
+        height: 340px;
     }
 
     &:first-child {
