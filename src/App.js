@@ -1,17 +1,21 @@
-import React from "react";
-import "./App.scss";
-import { Route, Switch } from "react-router-dom";
-import HomePage from "./pages/homePage/homePage.Component";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import './App.scss';
+
+import HomePage from './pages/homePage/homePage.Component';
 import ShopPage from "./pages/shopPage/shop.component";
-import Header from "./components/header/header.component";
+import Header from './components/header/header.component.jsx';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div>
+      <Header />
       <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/shop"  component={ShopPage} />
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route path='/signin' component={SignInAndSignUpPage} />
       </Switch>
     </div>
   );
